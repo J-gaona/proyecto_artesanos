@@ -124,8 +124,6 @@
       </p>
     </div>
   </div>
-
-  
   <!-- Columna de productos -->
   <div class="products">
     <h2>Productos de Creaciones Malu</h2>
