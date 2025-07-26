@@ -1,0 +1,27 @@
+<?php
+/**
+* ESTE ARCHIVO NOS PERMITIRÁ SOLICITAR LA CONEXIÓN
+* A NUESTRA BASE DE DATOS, ESTO PARA PODER EJECUTAR CONSULTAS
+* Y LAS SOLICITUDES NECESARIAS PARA OBTENER INFORMACIÓN
+*/
+
+// CONEXIÓN A NUESTRO SERVIDOR DE XAMPP
+$host = "localhost";
+
+// USUARIO PROPIETARIO QUE ACCEDE A LA BASE DE DATOS
+$user = "root";
+
+// CONTRASEÑA PARA INGRESAR A LA BASE DE DATOS
+$pass = "";
+
+// NOMBRE DE LA BASE DE DATOS
+$dbname = "artesanos";
+
+// SOLICITUD DE CONEXIÓN A LA BASE DE DATOS
+$conn = new mysqli($host, $user, $pass, $dbname);
+
+// VERIFICAR QUE LA CONEXIÓN SE HAGA CORRECTAMENTE
+if ($conn->connect_error) {
+    die("Conexión fallida: " . $conn->connect_error);
+}
+?>

@@ -1,191 +1,197 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Productos del Artesano</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Local Artesanal - Creaciones Malú</title>
   <style>
     body {
-      font-family: 'Arial', sans-serif;
-      margin: 0;
-      padding: 0;
+      font-family: Arial, sans-serif;
       background-color: #f9f9f9;
-      display: flex;
-    }
-    .container {
-      display: flex;
-      margin: 20px;
-      width: 100%;
-      gap: 20px;
-    }
-    .profile {
-      width: 25%;
-      background-color: white;
-      border-radius: 10px;
-      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+      margin: 0;
       padding: 20px;
     }
-    .profile img {
-      width: 100%;
+    .container {
+      max-width: 1000px;
+      margin: 0 auto;
+      background-color: #fff;
+      padding: 30px;
+      border-radius: 10px;
+      box-shadow: 0 0 15px rgba(0,0,0,0.1);
+    }
+    h1, h2, h3 {
+      color: #8b3e3e;
+    }
+    .section {
+      margin-bottom: 40px;
+    }
+    .local-img, .user-img {
+      max-width: 200px;
       border-radius: 10px;
     }
-    .profile h2 {
-      text-align: center;
-      margin: 15px 0 5px;
+    .info-grid {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 30px;
+      align-items: flex-start;
     }
-    .contact-info {
-      text-align: center;
-      font-size: 0.9em;
-      margin-bottom: 15px;
-      color: #444;
-    }
-    .contact-info a {
-      display: block;
-      color: #555;
-      text-decoration: none;
-      margin-top: 4px;
-    }
-    .contact-info a:hover {
-      text-decoration: underline;
-    }
-    .history {
-      background-color: #ffe8dd;
-      padding: 10px;
-      border-left: 5px solid #c84c36;
-      border-radius: 5px;
-    }
-    .history strong {
-      display: block;
-      margin-bottom: 5px;
-      color: #c84c36;
-    }
-    .products {
-      width: 75%;
-    }
-    .products h2 {
-      margin-bottom: 20px;
-      color: #772727;
-    }
-    .product-grid {
+    .productos {
       display: grid;
-      grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
       gap: 20px;
     }
-    .product-card {
-      background-color: white;
+    .producto {
+      background-color: #fffaf7;
       border-radius: 10px;
-      box-shadow: 0 0 10px rgba(0,0,0,0.1);
-      overflow: hidden;
-      display: flex;
-      flex-direction: column;
+      box-shadow: 0 0 8px rgba(0,0,0,0.1);
+      padding: 15px;
     }
-    .product-card img {
+    .producto img {
       width: 100%;
       height: 150px;
       object-fit: cover;
+      border-radius: 8px;
     }
-    .product-card h3 {
-      margin: 10px;
-      font-size: 1.1em;
+    .producto h4 {
+      margin: 10px 0 5px;
     }
-    .product-card p {
-      margin: 0 10px 10px;
+    .producto p {
       font-size: 0.9em;
       color: #444;
     }
-    .product-card button {
-      margin: 10px;
+    .producto button {
+      margin-top: 10px;
       padding: 8px;
       background-color: #8b3e3e;
       color: white;
       border: none;
       border-radius: 5px;
       cursor: pointer;
+      width: 100%;
     }
-    .product-card button:hover {
+    .producto button:hover {
       background-color: #6d2f2f;
     }
   </style>
 </head>
 <body>
-<div class="container">
-  <!-- Columna de perfil -->
-  <div class="profile">
-    <img src="../images/martha aguirre.png" alt="Foto Carmen Rodríguez">
-    <h2>Martha Lucia Aguirre</h2>
-    <div class="contact-info">
-      <a href="mailto:creacionesmalu@gmail.com">creacionesmalu@gmail.com</a>
-      <a href="tel:+573114931433">Tel: 311 4931433</a>
-      <a href="https://www.instagram.com/creaciones_malu72" target="_blank">Instagram: @creaciones_malu72</a>
-    </div>
-    <div class="history">
-      <strong>Historia:</strong>
-      <p>Martha Aguirre es una artesana apasionada y una mujer resiliente. Junto a su esposo, enfrenta con coraje una difícil prueba: hace cinco años, él perdió la visión. Lejos de rendirse, convirtieron este reto en una oportunidad para unirse aún más. Hoy, él colabora en la creación de manillas artesanales, aportando con sus manos y su corazón. Para ellos, la artesanía es más que un oficio: es una forma de sanar, de amar y de seguir adelante, juntos. 
-      </p>
-    </div>
-  </div>
+  <div class="container">
 
-  
-  <!-- Columna de productos -->
-  <div class="products">
-    <h2>Productos de Creaciones Malu</h2>
-    <div class="product-grid">
-      <div class="product-card">
-        <img src="../images/manilla 7 nudos.jpg" alt="Manilla 7 nudos de San Benito" />
-        <h3>Manilla 7 nudos de San Benito</h3>
-        <p>Manilla diseñada en hilo terlenca #15, con medalla de San Benito hecha de acero.</p>
-        <button>Ver más</button>
+    <!-- Local -->
+    <div class="section">
+      <h1>Creaciones Malú</h1>
+      <div class="info-grid">
+        <img src="../images/local.jpg" alt="Imagen del local" class="local-img">
+        <div>
+          <h3>Descripción del Local</h3>
+          <p>Local especializado en productos artesanales elaborados completamente a mano, utilizando diversas técnicas como tejido, ensartado, ensamble, corte, tinturado y resinado. Ofrecemos una amplia variedad de creaciones hechas con hilo crochet, hilo macramé, calceta de plátano y cabuya. Cada pieza refleja la riqueza de nuestras tradiciones y el cuidado artesanal en cada detalle.</p>
+
+          <p><strong>Dirección:</strong> Calle 123 #45-67, Barrio Artesanos</p>
+          <p><strong>Teléfono:</strong> 311 4931433</p>
+          <p><strong>WhatsApp:</strong> 311 4931433</p>
+          <p><strong>Correo:</strong> creacionesmalu@gmail.com</p>
+          <p><strong>Instagram:</strong> @creaciones_malu72</p>
+          <p><strong>Facebook:</strong> Creaciones Malú</p>
+        </div>
       </div>
-      <div class="product-card">
-        <img src="../images/pesebre de gruta.png" alt="Pesebre en gruta de icopor" />
-        <h3>Pesebre en gruta de icopor</h3>
-        <p>Pesebre hecho en icopor, calceta de platano, base en madera y las figuras hechas en arcilla.</p>
-        <button>Ver más</button>
+    </div>
+
+    <!-- Historia -->
+    <div class="section">
+      <h2>Historia del Local</h2>
+      <p>Martha Aguirre es una artesana apasionada y una mujer resiliente. Junto a su esposo, enfrenta con coraje una difícil prueba: hace cinco años, él perdió la visión. Lejos de rendirse, convirtieron este reto en una oportunidad para unirse aún más. Hoy, él colabora en la creación de manillas artesanales, aportando con sus manos y su corazón. Para ellos, la artesanía es más que un oficio: es una forma de sanar, de amar y de seguir adelante, juntos.</p>
+    </div>
+
+    <!-- Usuario -->
+    <div class="section">
+      <h2>Artesano Responsable</h2>
+      <div class="info-grid">
+        <img src="../images/marthalucia.png" alt="Foto del usuario" class="user-img">
+        <div>
+          <p><strong>Nombre:</strong> Martha Lucia Aguirre</p>
+          <p><strong>Correo:</strong> creacionesmalu@gmail.com</p>
+        </div>
       </div>
-      <div class="product-card">
-        <img src="../images/Manilla de mostacillacheca.png" alt="Manilla de Mostacilla Checa" />
-        <h3>Manilla de Mostacilla Checa</h3>
-        <p>Esta elaborada por mostacilla de colores y hilo de marroquineria.</p>
-        <button>Ver más</button>
-      </div>
-      <div class="product-card">
-        <img src="../images/Bolso imitacion guayu.png" alt="Bolso Imitacion Guayu" />
-        <h3>Bolso Imitacion Guayu</h3>
-        <p>Esta hecho a base de Hilo crochet de colores, aguja de crochet.</p>
-        <button>Ver más</button>
-      </div>
-      <div class="product-card">
-        <img src="../images/Tarjeteroenguadua.png" alt="Tarjeteros en Guadua" />
-        <h3>Tarjeteros en Guadua</h3>
-        <p>Esta elaborada en guadua y sesina.</p>
-        <button>Ver más</button>
-      </div>
-      <div class="product-card">
-        <img src="../images/Monederodetotumo.png" alt="Monedero de Totumo" />
-        <h3>Monedero de Totumo</h3>
-        <p>Esta diseñado con totumo, pinturas acrilica, tintilla, laca y cremallera.</p>
-        <button>Ver más</button>
-      </div>
-       <div class="product-card">
-        <img src="../images/Monederodecoco.png" alt="Monedero de Coco" />
-        <h3>Monedero de Coco</h3>
-        <p>Esta elaborado con cascara de coco, lija, cremallera y cera vegetal.</p>
-        <button>Ver más</button>
-      </div>
-       <div class="product-card">
-        <img src="../images/Llaveroentagua.jpg" alt="Llavero en Tagua" />
-        <h3>Llavero en Tagua</h3>
-        <p>Esta hecho en Tagua, pinturas acrílicas, cordón cola de rata, herraje de llavero y resina.</p>
-        <button>Ver más</button>
-      </div>
-      <div class="product-card">
-        <img src="../images/Bolsodetotumo.jpg" alt="Monedero de Coco" />
-        <h3>Bolso de Totumo</h3>
-        <p>Esta elaborado de hilo terlenca #5, totumo, tintilla, pinturas acrilicas y resina.</p>
-        <button>Ver más</button>
+    </div>
+
+    <!-- Productos -->
+    <div class="section">
+      <h2>Productos Artesanales</h2>
+      <div class="productos">
+
+        <div class="producto">
+          <img src="../images/manilla7nudos.jpg" alt="Manilla 7 nudos">
+          <h4>Manilla 7 nudos de San Benito</h4>
+          <p>Diseñada con hilo terlenca #15 y medalla de San Benito en acero.</p>
+          <p><strong>Precio:</strong> $7.000</p>
+          <button>Ver más</button>
+        </div>
+
+        <div class="producto">
+          <img src="../images/pesebreengruta.png" alt="Pesebre artesanal">
+          <h4>Pesebre en gruta de icopor</h4>
+          <p>Hecho con icopor, calceta de plátano, base en madera y figuras de arcilla.</p>
+          <p><strong>Precio:</strong> $20.000</p>
+          <button>Ver más</button>
+        </div>
+
+        <div class="producto">
+          <img src="../images/manillademostacilla.png" alt="Manilla checa">
+          <h4>Manilla de Mostacilla Checa</h4>
+          <p>Elaborada con mostacilla de colores y hilo de marroquinería.</p>
+          <p><strong>Precio:</strong> $15.000</p>
+          <button>Ver más</button>
+        </div>
+
+        <div class="producto">
+          <img src="../images/bolsoimitacion.png" alt="Bolso Guayu">
+          <h4>Bolso Imitación Guayu</h4>
+          <p>Hecho con hilo crochet de colores y aguja de crochet.</p>
+          <p><strong>Precio:</strong> $35.000</p>
+          <button>Ver más</button>
+        </div>
+
+        <div class="producto">
+          <img src="../images/tarjeteroenguadua.png" alt="Tarjetero">
+          <h4>Tarjetero en Guadua</h4>
+          <p>Elaborado en guadua y sesina.</p>
+          <p><strong>Precio:</strong> $20.000</p>
+          <button>Ver más</button>
+        </div>
+
+        <div class="producto">
+          <img src="../images/monederodetotumo.png" alt="Monedero Totumo">
+          <h4>Monedero de Totumo</h4>
+          <p>Diseñado con totumo, pinturas acrílicas, tintilla, laca y cremallera.</p>
+          <p><strong>Precio:</strong> $20.000</p>
+          <button>Ver más</button>
+        </div>
+
+        <div class="producto">
+          <img src="../images/monederodecoco.png" alt="Monedero Coco">
+          <h4>Monedero de Coco</h4>
+          <p>Hecho con cáscara de coco, lija, cremallera y cera vegetal.</p>
+          <p><strong>Precio:</strong> $25.000</p>
+          <button>Ver más</button>
+        </div>
+
+        <div class="producto">
+          <img src="../images/llaveroentagua.jpg" alt="Llavero Tagua">
+          <h4>Llavero en Tagua</h4>
+          <p>Tagua, pinturas acrílicas, cordón cola de rata, herraje y resina.</p>
+          <p><strong>Precio:</strong> $10.000</p>
+          <button>Ver más</button>
+        </div>
+
+        <div class="producto">
+          <img src="../images/bolsodetotumo.jpg" alt="Bolso Totumo">
+          <h4>Bolso de Totumo</h4>
+          <p>Hilo terlenca #5, totumo, tintilla, pinturas acrílicas y resina.</p>
+          <p><strong>Precio:</strong> $35.000</p>
+          <button>Ver más</button>
+        </div>
       </div>
     </div>
   </div>
-</div>
 </body>
 </html>
