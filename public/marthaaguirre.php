@@ -128,7 +128,7 @@
         </div>
 
         <div class="producto">
-          <img src="../images/pesebreengruta.png" alt="Pesebre artesanal">
+          <img src="../images/collarescuarzo.jpeg" alt="Pesebre artesanal">
           <h4>Pesebre en gruta de icopor</h4>
           <p>Hecho con icopor, calceta de plátano, base en madera y figuras de arcilla.</p>
           <p><strong>Precio:</strong> $20.000</p>
